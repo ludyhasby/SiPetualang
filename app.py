@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-from PIL import Image
 import re # untuk findall
 import base64
 import requests
@@ -221,29 +220,4 @@ with tab3:
         social_icons(32, 32, Email=email_url),
         unsafe_allow_html=True)
     st.markdown("")
-st.markdown("*Copyright © 2024 DoaQuest*")
-
-
-
-    # if option_peran == "Petugas":
-    #     st.subheader("Misi Anda Mengunjungi Rumah pada Koordinat sebagai berikut")
-    #     dm = df[df["PETUGAS"]==option_nama]
-    #     st.table(dm.head())
-
-
-    
-    
-
-
-# st.write(min_lat)
-# # st.table(df.head(200))
-# lat_min, lat_max = -6.35, -5.90
-# lon_min, lon_max = 106.60, 107.10
-
-# # Filter DataFrame berdasarkan batas koordinat Jakarta Pusat
-# temp_jakarta_pusat = temp[(temp['lat'] >= lat_min) & (temp['lat'] <= lat_max) & (temp['lon'] >= lon_min) & (temp['lon'] <= lon_max)]
-
-# # Tampilkan peta dengan titik-titik yang telah difilter
-# st.map(temp_jakarta_pusat[['lat', 'lon']])
-# coba = temp[temp['lon']==min_lon]
-# st.table(coba)
+st.markdown("*Copyright © 2024 Si Petualang*")
