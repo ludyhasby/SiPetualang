@@ -135,7 +135,7 @@ with tab1:
         option_nama = st.multiselect("Pilihan Nama Petugas", nama_list)
         st.subheader("Misi Anda Mengunjungi Rumah pada Koordinat sebagai berikut")
         dm = df[df["PETUGAS"].isin(option_nama)]
-        st.map(dm[["lat", "lon"]], size=6)
+        st.map(dm[["lat", "lon"]], size=4)
         # st.table(dm)
     elif option_peran == "Kordinator":
         st.write("Anda memilih peran Koordinator, Silahkan isi Nama Koordinator")
@@ -143,7 +143,7 @@ with tab1:
         option_nama = st.multiselect("Pilihan Nama Koordinator", nama_list)
         st.subheader("Pantau Petugas anda pada Koordinat sebagai berikut")
         dm = df[df["KORDINATOR"].isin(option_nama)]
-        st.map(dm[["lat", "lon"]], size=6)
+        st.map(dm[["lat", "lon"]], size=4)
     
     st.subheader("Menampilkan Pelanggan Harus Dikunjungi")
     st.write("Data yang akan difilter adalah data sesuai dengan peran dan nama petugas/koordinator")
@@ -200,11 +200,11 @@ with tab1:
             maps_i = ds[columns].iloc[i]
             maps_i_list = [maps_i] * 2
             maps_i = pd.DataFrame(maps_i_list, columns=['lat', 'lon'])
-            st.map(maps_i, size=6)
+            st.map(maps_i, size=4)
     
     on_vis = st.toggle('Tampilkan Kompilasi Maps Hasil Filtering')
     if on_vis & len(ds) != 0:
-        st.map(ds[["lat", "lon"]], size=6)
+        st.map(ds[["lat", "lon"]], size=4)
     else:
         st.write("Pastikan anda memilih lebih dari satu data")
 
