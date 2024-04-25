@@ -143,7 +143,7 @@ with tab1:
         option_nama = st.multiselect("Pilihan Nama Koordinator", nama_list)
         st.subheader("Pantau Petugas anda pada Koordinat sebagai berikut")
         dm = df[df["KORDINATOR"].isin(option_nama)]
-        st.map(dm[["lat", "lon"]])
+        st.map(dm[["lat", "lon"]], size=6)
     
     st.subheader("Menampilkan Pelanggan Harus Dikunjungi")
     st.write("Data yang akan difilter adalah data sesuai dengan peran dan nama petugas/koordinator")
